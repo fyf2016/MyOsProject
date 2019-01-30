@@ -3,8 +3,7 @@
 [![HitCount](http://hits.dwyl.io/fyf2016/MyOsProject.svg)](http://hits.dwyl.io/fyf2016/MyOsProject) [![GitHub license](https://img.shields.io/github/license/fyf2016/MyOsProject.svg)](https://github.com/fyf2016/MyOsProject/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-orange.svg)](https://codeload.github.com/MyOsProject/zip/master) 
 [![Gitter](https://img.shields.io/gitter/room/fyf2016/MyOsProject.svg)](https://gitter.im/MyOsProject/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
-[项目开发流程和演示 ( 点击即可跳转 )]
-(https://fyf2016.github.io/2018/07/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E8%AE%BE/)
+[项目开发流程和演示 ( 点击即可跳转 )](https://fyf2016.github.io/2018/07/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E8%AE%BE/)
 
 >多道程序缓冲区协调操作( 操作系统课设 )
 
@@ -18,6 +17,16 @@
 - 实现了多线程的同步和互斥关系。
 - 用MySQL数据库存储数据, 方便研究。
 - 类似单页面程序,简短高效。
+
+## 项目主要针对的问题
+>问题描述
+  有多个PUT操作要不断循环地向Buffer1送字符数据，有Move1操作不断地将Buffer1的数据取到Buffer2，
+  Move2操作不断地将Buffer1的数据取到Buffer3，有多个GET操作要不断地从Buffer2和Buffer3中取数据。
+  PUT、 MOVE、 GET每次操作一个数据，为了在操作的过程中要保证数据不丢失, 每个Buffer每次只能接受
+  一个PUT或一个Move或一个Get。运用进程同步和互斥机制设计一个多道程序完成上述操作。
+>图示
+
+![图示](https://fyf2016.github.io/images/project/OsProject/1.png)
 
 ## 项目主要界面展示
  >主页
