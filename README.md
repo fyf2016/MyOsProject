@@ -19,14 +19,19 @@
 - 类似单页面程序,简短高效。
 
 ## 项目主要针对的问题
+
 >问题描述
-  有多个PUT操作要不断循环地向Buffer1送字符数据，有Move1操作不断地将Buffer1的数据取到Buffer2，
-  Move2操作不断地将Buffer1的数据取到Buffer3，有多个GET操作要不断地从Buffer2和Buffer3中取数据。
-  PUT、 MOVE、 GET每次操作一个数据，为了在操作的过程中要保证数据不丢失, 每个Buffer每次只能接受
-  一个PUT或一个Move或一个Get。运用进程同步和互斥机制设计一个多道程序完成上述操作。
+
+    有多个PUT操作要不断循环地向Buffer1送字符数据，有Move1操作不断地将Buffer1的数据取到Buffer2，
+    Move2操作不断地将Buffer1的数据取到Buffer3，有多个GET操作要不断地从Buffer2和Buffer3中取数据。
+    PUT、 MOVE、 GET每次操作一个数据，为了在操作的过程中要保证数据不丢失, 每个Buffer每次只能接受
+    一个PUT或一个Move或一个Get。运用进程同步和互斥机制设计一个多道程序完成上述操作。
+  
 >图示
 
 ![图示](https://fyf2016.github.io/images/project/OsProject/1.png)
+
+---
 
 ## 项目主要界面展示
  >主页
